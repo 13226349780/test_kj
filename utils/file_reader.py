@@ -6,6 +6,8 @@ class YamlReader:
             self.yamlf = yamlf
         else:
             raise FileNotFoundError('文件不存在')
+        self._data = None
+
     @property
     def data(self):
         if not self._data:
